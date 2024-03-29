@@ -8,7 +8,6 @@ bot = telebot.TeleBot(token)
 
 
 def savelink(link : str):
-
     qr = qrcode.make(link)
     path = "code.png"
     qr.save(path)
