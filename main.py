@@ -3,6 +3,9 @@ import telebot
 from PIL import Image
 from os import remove
 
+token = "7103218621:AAG0OMIpTCQVir27XZDIclrqIS5my0rv0LI"
+bot = telebot.TeleBot(token)
+
 
 def savelink(link : str):
 
@@ -11,12 +14,6 @@ def savelink(link : str):
     qr.save(path)
     file = Image.open(path)
     return file
-
-
-
-token = "7103218621:AAG0OMIpTCQVir27XZDIclrqIS5my0rv0LI"
-
-bot = telebot.TeleBot(token)
 
 
 @bot.message_handler(content_types=["text"])
